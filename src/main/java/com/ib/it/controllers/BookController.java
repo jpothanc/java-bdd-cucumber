@@ -29,9 +29,9 @@ public class BookController {
     @ApiResponse(responseCode = "404", description = "Book data found")
     @ApiResponse(responseCode = "500", description = "Internal server error")
     @GetMapping("/book")
-    public ResponseEntity<Book> getBookByIsbn(@RequestParam String bookIsbn) {
+    public ResponseEntity<Book> getBookByIsbn(@RequestParam String isbn) {
         try {
-            return ResponseEntity.ok(bookService.GetBookByIsbn(bookIsbn));
+            return ResponseEntity.ok(bookService.GetBookByIsbn(isbn));
         } catch (NoSuchElementException e) {
             return ResponseEntity.notFound().build();
         } catch (Exception e) {

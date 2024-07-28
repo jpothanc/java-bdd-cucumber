@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="9.861" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Book Controller" name="Get book by isbn" time="1.424">
+<system-out><![CDATA[
+Given I have a list of books................................................passed
+When I request book with isbn 'isbn:1111'...................................passed
+Then I should receive book with isbn 'isbn:1111'............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Book Controller" name="Get book by isbn fails when book does not exist" time="0.01">
+<system-out><![CDATA[
+Given I have a list of books................................................passed
+When I request book with isbn 'isbn:9999'...................................passed
+Then I should receive book not found........................................passed
+]]></system-out>
+</testcase>
+</testsuite>

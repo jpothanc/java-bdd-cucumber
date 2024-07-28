@@ -15,18 +15,30 @@ dependencies {
     //spring dependencies
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-test'
+    //Required for WebFlux
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
 
     //Lombok is a Java library that streamlines code by using annotations to
-    // eliminate boilerplate code, such as getters, setters, and constructors,
-    // enhancing code readability and maintainability.
+    //eliminate boilerplate code, such as getters, setters, and constructors,
+    //enhancing code readability and maintainability.
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
     //swagger dependencies
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
 
+    // Cucumber dependencies
+    testImplementation 'io.cucumber:cucumber-java:7.18.0'
+    //@CucumberContextConfiguration
+    testImplementation 'io.cucumber:cucumber-spring:7.18.0'
+    testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.18.0'
+
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.junit.platform:junit-platform-suite-api:1.10.3'
+
+
+
 }
 
 test {
